@@ -142,8 +142,7 @@
   <div class="panel" id="next">
     <div class="lbl">Next matches</div>
     <div class="note">
-      <span class="k">📊 <b>Bar</b> = bookmaker win / draw / lose odds</span>
-      <span class="k">🏦 <b>Bookmaker</b> = most likely score</span><br>
+      <span class="k">📊 <b>Bar</b> = bookmaker win / draw / lose odds</span><br>
       <span style="display:inline-block;margin-top:6px">Each pick: <b class="g">🟢 backs the favourite</b> · <b class="a">🟡 draw</b> · <b class="x">🔴 backs the underdog</b></span>
     </div>
     <div class="card" id="games"></div>
@@ -210,13 +209,12 @@ document.getElementById('games').innerHTML=NEXT.map(m=>{
   const [home,hiso,away,aiso,when,pH,pD,pA,book,picks]=m;
   const fav = pH>=pA?'H':'A';
   const sorted=[...picks].sort((a,b)=>{const ma=a[1].split('-').map(Number),mb=b[1].split('-').map(Number);return (mb[0]-mb[1])-(ma[0]-ma[1])||b[1].localeCompare(a[1]);});
-  const bookRow=`<div class="pr book"><span class="bk">🏦</span><span class="n">Bookmaker · most likely</span><span class="sc ${scClass(book,fav)}">${book}</span></div>`;
   const rows=sorted.map(([nm,sc])=>`<div class="pr"><span class="av" style="background:${col(nm)}">${ini(nm)}</span><span class="n">${nm}</span><span class="sc ${scClass(sc,fav)}">${sc}</span></div>`).join('');
   return `<div class="game">
     <div class="gh"><div class="tm">${flag(hiso)} ${home}<span class="vs">–</span>${flag(aiso)} ${away}</div><div class="wh">${when}</div></div>
     <div class="odds"><div class="obar"><i class="h" style="width:${pH}%"></i><i class="d" style="width:${pD}%"></i><i class="a" style="width:${pA}%"></i></div>
       <div class="olab"><span>${home} ${pH}%</span><span class="mid">Draw ${pD}%</span><span>${away} ${pA}%</span></div></div>
-    <div class="picks">${bookRow}${rows}</div>
+    <div class="picks">${rows}</div>
   </div>`;
 }).join('');
 
