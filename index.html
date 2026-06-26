@@ -191,41 +191,47 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 25/06 16:04
+    Flags via flagcdn.com · updated 26/06 08:03
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Strada Diavola",6,3,26,19,230],
- ["Luca(ku)",6,6,21,21,228],
- ["Filippo",7,5,20,22,227],
- ["Mat VDP",5,6,22,21,223],
- ["Roll-up United",7,4,20,23,221],
- ["Sandrinho",2,12,17,23,212],
- ["Rikitic",7,6,15,20,207],
- ["Benadonna",3,8,19,24,205],
- ["Sigiño",2,5,25,22,202],
- ["Samuel",6,6,16,15,197],
- ["Petra De Bruyne",5,5,15,29,189],
- ["NichoDP",3,0,17,26,141],
+ ["Luca(ku)",6,7,23,24,248],
+ ["Strada Diavola",6,4,27,23,246],
+ ["Sandrinho",4,13,18,25,246],
+ ["Filippo",7,6,21,26,243],
+ ["Roll-up United",8,5,20,27,242],
+ ["Mat VDP",6,6,23,25,242],
+ ["Rikitic",7,8,17,22,233],
+ ["Benadonna",4,9,19,28,226],
+ ["Samuel",7,7,17,18,222],
+ ["Sigiño",2,5,27,26,216],
+ ["Petra De Bruyne",5,6,16,33,205],
+ ["NichoDP",4,1,18,29,166],
  ["Nathan De Cat 💜🤍",2,5,10,13,118],
  ["Bas",2,3,6,13,84],
  ["Red Devil Capital",1,0,8,8,58],
  ["Hans Vanaken is Magic!",0,1,0,3,10]
 ];
-const PREV={"Filippo":1,"Mat VDP":2,"Strada Diavola":3,"Luca(ku)":4,"Rikitic":5,"Sandrinho":6,"Roll-up United":7,"Benadonna":8,"Sigiño":9,"Samuel":10,"Petra De Bruyne":11,"NichoDP":12,"Nathan De Cat 💜🤍":13,"Bas":14,"Red Devil Capital":15,"Hans Vanaken is Magic!":16};
-const PREVAT=54;
+const PREV={"Strada Diavola":1,"Luca(ku)":2,"Filippo":3,"Mat VDP":4,"Roll-up United":5,"Sandrinho":6,"Rikitic":7,"Benadonna":8,"Sigiño":9,"Samuel":10,"Petra De Bruyne":11,"NichoDP":12,"Nathan De Cat 💜🤍":13,"Bas":14,"Red Devil Capital":15,"Hans Vanaken is Magic!":16};
+const PREVAT=60;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Curaçao","cw","Ivoorkust","ci","25/06 22:00",null,null,null,"Rikitic 1-2 · Sandrinho 0-2 · Strada Diavola 0-3 · Benadonna 0-2 · Mat VDP 0-2 · NichoDP 0-2 · Roll-up United 0-2 · Filippo 1-3 · Luca(ku) 0-3 · Petra De Bruyne 1-1 · Sigiño 0-3"],
- ["Ecuador","ec","Duitsland","de","25/06 22:00",null,null,null,"Rikitic 0-3 · Sandrinho 1-2 · Strada Diavola 1-3 · Benadonna 1-2 · Mat VDP 0-1 · NichoDP 0-2 · Roll-up United 1-2 · Filippo 0-2 · Luca(ku) 0-1 · Petra De Bruyne 1-4 · Sigiño 0-4"],
- ["Tunesië","tn","Nederland","nl","26/06 01:00",null,null,null,"Rikitic 0-1 · Sandrinho 1-2 · Strada Diavola 0-2 · Benadonna 0-2 · Mat VDP 0-2 · NichoDP 0-1 · Roll-up United 0-2 · Filippo 1-2 · Luca(ku) 0-3 · Petra De Bruyne 1-2 · Sigiño 0-3"],
- ["Japan","jp","Zweden","se","26/06 01:00",null,null,null,"Rikitic 2-1 · Sandrinho 1-1 · Strada Diavola 2-1 · Benadonna 2-1 · Mat VDP 2-1 · NichoDP 2-0 · Roll-up United 1-0 · Filippo 1-2 · Luca(ku) 1-0 · Petra De Bruyne 1-3 · Sigiño 2-1"]
+ ["Noorwegen","no","Frankrijk","fr","26/06 21:00",null,null,null,"Rikitic 1-1 · Sandrinho 0-2 · Strada Diavola 1-2 · Benadonna 0-3 · Mat VDP 1-2 · NichoDP 0-3 · Roll-up United 0-1 · Filippo 1-2 · Luca(ku) 0-1 · Samuel 1-1 · Petra De Bruyne 1-2 · Sigiño 1-3"],
+ ["Senegal","sn","Irak","iq","26/06 21:00",null,null,null,"Rikitic 0-0 · Sandrinho 1-0 · Strada Diavola 2-0 · Benadonna 2-0 · Mat VDP 2-0 · NichoDP 2-0 · Roll-up United 2-0 · Filippo 2-2 · Luca(ku) 3-0 · Samuel 2-0 · Petra De Bruyne 1-1 · Sigiño 2-0"],
+ ["Uruguay","uy","Spanje","es","27/06 02:00",null,null,null,"Rikitic 1-2 · Sandrinho 1-2 · Strada Diavola 1-2 · Benadonna 1-2 · Mat VDP 1-2 · Roll-up United 0-1 · Filippo 1-1 · Luca(ku) 0-2 · Samuel 0-2 · Petra De Bruyne 0-3 · Sigiño 0-2"],
+ ["Kaapverdië","cv","Saudi-Arabië","sa","27/06 02:00",null,null,null,"Rikitic 3-3 · Sandrinho 1-1 · Strada Diavola 1-0 · Benadonna 1-1 · Mat VDP 0-1 · Roll-up United 1-1 · Filippo 2-2 · Luca(ku) 1-0 · Petra De Bruyne 1-1 · Sigiño 1-1"]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
+ ["Paraguay","py","Australië","au","26/06",0,0,"Rikitic 1-1|7 · Sandrinho 1-1|7 · NichoDP 1-1|7 · Luca(ku) 1-1|7 · Samuel 1-1|7 · Petra De Bruyne 1-1|7 · Strada Diavola 1-2|1 · Benadonna 2-1|1 · Mat VDP 1-0|1 · Roll-up United 0-1|1 · Filippo 1-0|1 · Sigiño 2-1|1"],
+ ["Turkije","tr","Verenigde Staten","us","26/06",3,2,"Rikitic 2-1|7 · Sandrinho 1-2|1 · Strada Diavola 1-1|1 · Benadonna 1-1|1 · Mat VDP 1-2|1 · NichoDP 0-1|1 · Roll-up United 0-1|1 · Filippo 0-0|1 · Luca(ku) 0-1|1 · Samuel 0-2|1 · Petra De Bruyne 1-2|1 · Sigiño 0-3|1"],
+ ["Tunesië","tn","Nederland","nl","26/06",1,3,"Strada Diavola 0-2|7 · Benadonna 0-2|7 · Roll-up United 0-2|7 · Rikitic 0-1|5 · Sandrinho 1-2|5 · Mat VDP 0-4|5 · NichoDP 0-1|5 · Filippo 1-2|5 · Luca(ku) 0-3|5 · Samuel 0-3|5 · Petra De Bruyne 1-2|5 · Sigiño 0-3|5"],
+ ["Japan","jp","Zweden","se","26/06",1,1,"Sandrinho 1-1|10 · Rikitic 2-1|1 · Strada Diavola 2-1|1 · Benadonna 2-1|1 · Mat VDP 2-1|1 · NichoDP 2-0|1 · Roll-up United 1-0|1 · Filippo 1-2|1 · Luca(ku) 1-0|1 · Samuel 2-1|1 · Petra De Bruyne 1-3|1 · Sigiño 2-1|1"],
+ ["Curaçao","cw","Ivoorkust","ci","25/06",0,2,"Sandrinho 0-2|10 · Benadonna 0-2|10 · Mat VDP 0-2|10 · NichoDP 0-2|10 · Roll-up United 0-2|10 · Samuel 0-2|10 · Filippo 1-3|7 · Rikitic 1-2|5 · Strada Diavola 0-3|5 · Luca(ku) 0-3|5 · Sigiño 0-3|5 · Petra De Bruyne 1-1|1"],
+ ["Ecuador","ec","Duitsland","de","25/06",2,1,"Rikitic 0-3|1 · Sandrinho 1-2|1 · Strada Diavola 1-3|1 · Benadonna 1-2|1 · Mat VDP 0-3|1 · NichoDP 0-2|1 · Roll-up United 1-2|1 · Filippo 0-2|1 · Luca(ku) 0-1|1 · Samuel 0-2|1 · Petra De Bruyne 1-4|1 · Sigiño 0-4|1"],
  ["Tsjechië","cz","Mexico","mx","25/06",0,3,"Strada Diavola 1-2|5 · Mat VDP 0-2|5 · Roll-up United 0-1|5 · Luca(ku) 0-1|5 · Petra De Bruyne 1-2|5 · Sigiño 1-3|5 · Sandrinho 1-1|1 · Benadonna 2-2|1 · NichoDP 1-1|1 · Filippo 2-2|1"],
  ["Zuid-Afrika","za","Zuid-Korea","kr","25/06",1,0,"Sandrinho 2-0|5 · Strada Diavola 0-2|1 · Benadonna 1-2|1 · Mat VDP 1-2|1 · NichoDP 0-1|1 · Roll-up United 0-1|1 · Filippo 0-0|1 · Luca(ku) 0-1|1 · Petra De Bruyne 1-1|1 · Sigiño 1-1|1"],
  ["Marokko","ma","Haïti","ht","25/06",4,2,"Sandrinho 2-0|7 · Roll-up United 2-0|7 · Samuel 2-0|7 · Strada Diavola 4-0|5 · Benadonna 3-0|5 · Mat VDP 3-0|5 · NichoDP 3-0|5 · Luca(ku) 3-0|5 · Petra De Bruyne 2-1|5 · Sigiño 4-0|5 · Filippo 1-1|1"],
@@ -290,13 +296,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(fav==null?'':(o===fav?'sg':'sr'));}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Matchday 1 · 54 of 72 group games played · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Matchday 1 · 60 of 72 group games played · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Tsjechië 0-3 Mexico</b> — not a soul saw that coming. <b>Strada Diavola</b> leads on <b>230</b>, but <b>Luca(ku)</b> is right on the bumper, 6 exact and ice-cold. <b>Filippo</b> is in freefall, down <b>2</b>. And <b>Hans Vanaken is Magic!</b>? Vanished — rock bottom on 10, 220 adrift. <b>Roll-up United</b> got cold feet — swapped the #56 pick 1-1 → 1-2 (Changes).`;
+ `Latest in: <b>Paraguay 0-0 Australië</b> — not a soul saw that coming. <b>Luca(ku)</b> leads on <b>248</b>, but <b>Strada Diavola</b> is right on the bumper, 6 exact and ice-cold. <b>Sandrinho</b> is the mover of the day — rocketed up <b>3</b> places. <b>Mat VDP</b> is in freefall, down <b>2</b>. And <b>Hans Vanaken is Magic!</b>? Vanished — rock bottom on 10, 238 adrift.`;
 document.getElementById('upcoming').innerHTML=
- `Next up: <b>Curaçao – Ivoorkust</b>. 5 of 11 have piled onto <b>0-2</b>. <b>Strada Diavola</b> is swinging for the fences at 0-3. <b>Petra De Bruyne</b> is the brave one calling a draw. Then <b>Ecuador–Duitsland</b> and <b>Tunesië–Nederland</b>. <b>Strada Diavola</b> is the one to hunt down.`;
+ `Next up: <b>Noorwegen – Frankrijk</b>. 4 of 12 have piled onto <b>1-2</b>. <b>Benadonna</b> is swinging for the fences at 0-3. <b>Rikitic</b> is the brave one calling a draw. Then <b>Senegal–Irak</b> and <b>Uruguay–Spanje</b>. <b>Luca(ku)</b> is the one to hunt down.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -429,7 +435,7 @@ const CHANGES=[
  ["Roll-up United",59,"Paraguay","Australië","0-0","0-1","2026-06-15T14:57"],
  ["Roll-up United",49,"Bosnië en Herzegovina","Qatar","1-0","1-1","2026-06-15T14:57"]
 ];
-const SNAP={"Rikitic":{"3332941":"1-1","3332946":"1-2","3332947":"0-0","3332950":"0-1","3332954":"0-3","3332974":"0-3","3332975":"1-1","3332979":"2-1","3332981":"1-2","3332982":"0-2","3332985":"0-2","3332988":"2-1","3332989":"1-1","3332997":"3-3","3333013":"1-0","3333029":"1-1","3333030":"1-2","3333038":"0-0"},"Sandrinho":{"3332941":"1-1","3332946":"0-2","3332947":"3-0","3332950":"1-2","3332954":"0-3","3332974":"1-2","3332975":"0-2","3332979":"1-1","3332981":"1-2","3332982":"0-2","3332985":"1-2","3332988":"1-2","3332989":"1-1","3332997":"1-1","3333013":"2-2","3333029":"1-1","3333030":"1-3","3333038":"1-0"},"Strada Diavola":{"3332941":"1-2","3332946":"0-3","3332947":"1-1","3332950":"0-2","3332954":"0-3","3332974":"1-3","3332975":"1-2","3332979":"2-1","3332981":"1-2","3332982":"0-2","3332985":"1-2","3332988":"1-1","3332989":"0-2","3332997":"1-0","3333013":"1-2","3333029":"2-0","3333030":"1-2","3333038":"2-0"},"Benadonna":{"3332941":"2-1","3332946":"0-2","3332947":"2-0","3332950":"0-2","3332954":"0-2","3332974":"1-2","3332975":"0-3","3332979":"2-1","3332981":"1-2","3332982":"0-3","3332985":"0-2","3332988":"1-1","3332989":"0-1","3332997":"1-1","3333013":"2-1","3333029":"2-1","3333030":"1-2","3333038":"2-0"},"Mat VDP":{"3332941":"1-0","3332946":"0-2","3332947":"1-1","3332950":"0-2","3332954":"0-3","3332974":"0-1","3332975":"1-2","3332979":"2-1","3332981":"1-2","3332982":"0-4","3332985":"0-3","3332988":"1-2","3332989":"1-2","3332997":"0-1","3333013":"0-1","3333029":"2-1","3333030":"1-2","3333038":"2-0"},"NichoDP":{"3332941":"1-1","3332946":"0-2","3332950":"0-1","3332974":"0-2","3332975":"0-3","3332979":"2-0","3332988":"0-1","3333038":"2-0"},"Roll-up United":{"3332941":"0-1","3332946":"0-2","3332947":"1-1","3332950":"0-2","3332954":"0-1","3332974":"1-2","3332975":"0-1","3332979":"1-0","3332981":"0-1","3332982":"0-2","3332985":"0-3","3332988":"0-1","3332989":"0-1","3332997":"1-1","3333013":"1-0","3333029":"1-0","3333030":"1-1","3333038":"2-0"},"Filippo":{"3332941":"1-0","3332946":"1-3","3332947":"2-2","3332950":"1-2","3332954":"1-3","3332974":"0-2","3332975":"1-2","3332979":"1-2","3332981":"1-1","3332982":"0-3","3332985":"0-2","3332988":"0-0","3332989":"0-0","3332997":"2-2","3333013":"0-0","3333029":"1-0","3333030":"0-1","3333038":"2-2"},"Luca(ku)":{"3332941":"1-1","3332946":"0-3","3332947":"1-0","3332950":"0-3","3332954":"0-3","3332974":"0-1","3332975":"0-1","3332979":"1-0","3332981":"0-2","3332982":"0-3","3332985":"0-3","3332988":"0-1","3332989":"1-1","3332997":"1-0","3333013":"1-0","3333029":"1-0","3333030":"0-1","3333038":"3-0"},"Petra De Bruyne":{"3332941":"1-1","3332946":"1-1","3332947":"2-1","3332950":"1-2","3332954":"0-3","3332974":"1-4","3332975":"1-2","3332979":"1-3","3332981":"0-3","3332982":"1-2","3332985":"0-2","3332988":"1-2","3332989":"1-1","3332997":"1-1","3333013":"1-1","3333029":"1-0","3333030":"0-3","3333038":"1-1"},"Sigiño":{"3332941":"2-1","3332946":"0-3","3332947":"1-1","3332950":"0-3","3332954":"0-2","3332974":"0-4","3332975":"1-3","3332979":"2-1","3332981":"0-2","3332982":"0-3","3332985":"0-3","3332988":"0-3","3332989":"1-1","3332997":"1-1","3333013":"1-2","3333029":"2-1","3333030":"2-3","3333038":"2-0"}};
+const SNAP={"Rikitic":{"3332947":"0-0","3332954":"0-3","3332975":"1-1","3332981":"1-2","3332982":"0-2","3332985":"0-2","3332989":"1-1","3332997":"3-3","3333013":"1-0","3333029":"1-1","3333030":"1-2","3333038":"0-0"},"Sandrinho":{"3332947":"3-0","3332954":"0-3","3332975":"0-2","3332981":"1-2","3332982":"0-2","3332985":"1-2","3332989":"1-1","3332997":"1-1","3333013":"2-2","3333029":"1-1","3333030":"1-3","3333038":"1-0"},"Strada Diavola":{"3332947":"1-1","3332954":"0-3","3332975":"1-2","3332981":"1-2","3332982":"0-2","3332985":"1-2","3332989":"0-2","3332997":"1-0","3333013":"1-2","3333029":"2-0","3333030":"1-2","3333038":"2-0"},"Benadonna":{"3332947":"2-0","3332954":"0-2","3332975":"0-3","3332981":"1-2","3332982":"0-3","3332985":"0-2","3332989":"0-1","3332997":"1-1","3333013":"2-1","3333029":"2-1","3333030":"1-2","3333038":"2-0"},"Mat VDP":{"3332947":"1-1","3332954":"0-3","3332975":"1-2","3332981":"1-2","3332982":"0-4","3332985":"0-3","3332989":"1-2","3332997":"0-1","3333013":"0-1","3333029":"2-1","3333030":"1-2","3333038":"2-0"},"NichoDP":{"3332975":"0-3","3333038":"2-0"},"Roll-up United":{"3332947":"1-1","3332954":"0-1","3332975":"0-1","3332981":"0-1","3332982":"0-2","3332985":"0-3","3332989":"0-1","3332997":"1-1","3333013":"1-0","3333029":"1-0","3333030":"1-1","3333038":"2-0"},"Filippo":{"3332947":"2-2","3332954":"1-3","3332975":"1-2","3332981":"1-1","3332982":"0-3","3332985":"0-2","3332989":"0-0","3332997":"2-2","3333013":"0-0","3333029":"1-0","3333030":"0-1","3333038":"2-2"},"Luca(ku)":{"3332947":"1-0","3332954":"0-3","3332975":"0-1","3332981":"0-2","3332982":"0-3","3332985":"0-3","3332989":"1-1","3332997":"1-0","3333013":"1-0","3333029":"1-0","3333030":"0-1","3333038":"3-0"},"Samuel":{"3332947":"2-0","3332954":"0-2","3332975":"1-1","3332981":"0-2","3333038":"2-0"},"Petra De Bruyne":{"3332947":"2-1","3332954":"0-3","3332975":"1-2","3332981":"0-3","3332982":"1-2","3332985":"0-2","3332989":"1-1","3332997":"1-1","3333013":"1-1","3333029":"1-0","3333030":"0-3","3333038":"1-1"},"Sigiño":{"3332947":"1-1","3332954":"0-2","3332975":"1-3","3332981":"0-2","3332982":"0-3","3332985":"0-3","3332989":"1-1","3332997":"1-1","3333013":"1-2","3333029":"2-1","3333030":"2-3","3333038":"2-0"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
