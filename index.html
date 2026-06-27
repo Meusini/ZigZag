@@ -191,7 +191,7 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 27/06 15:25
+    Flags via flagcdn.com · updated 27/06 16:09
   </footer>
 </div>
 
@@ -306,7 +306,7 @@ function sub(){document.getElementById('sub').textContent=`Matchday 1 · 66 of 7
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Nieuw-Zeeland 1-5 België</b> — not a soul saw that coming. <b>Strada Diavola</b> leads on <b>279</b>, but <b>Sandrinho</b> is right on the bumper, 7 exact and ice-cold. <b>Mat VDP</b> is the mover of the day — rocketed up <b>3</b> places. <b>Luca(ku)</b> is in freefall, down <b>4</b>. And <b>Hans Vanaken is Magic!</b>? Vanished — rock bottom on 10, 269 adrift.`;
+ `Latest in: <b>Nieuw-Zeeland 1-5 België</b> — not a soul saw that coming. <b>Strada Diavola</b> leads on <b>279</b>, but <b>Sandrinho</b> is right on the bumper, 7 exact and ice-cold. <b>Mat VDP</b> is the mover of the day — rocketed up <b>3</b> places. <b>Luca(ku)</b> is in freefall, down <b>4</b>. And <b>Hans Vanaken is Magic!</b>? Vanished — rock bottom on 10, 269 adrift. <b>Roll-up United</b> got cold feet — swapped the #71 pick 0-3 → 0-1 (Changes).`;
 document.getElementById('upcoming').innerHTML=
  `Next up: <b>Panama – Engeland</b>. 5 of 12 have piled onto <b>0-2</b>. <b>Mat VDP</b> is swinging for the fences at 0-4. Then <b>Kroatië–Ghana</b> and <b>DR Congo–Oezbekistan</b>. <b>Strada Diavola</b> is the one to hunt down.`;
 
@@ -400,6 +400,8 @@ renderTrend();
 
 // changes — recent prediction activity. CHANGES = [player, gameNo, home, away, before, after, isoTime]; before=null = first log/added, set = edited.
 const CHANGES=[
+ ["Roll-up United",71,"Jordanië","Argentinië","0-3","0-1","2026-06-27T13:33"],
+ ["Roll-up United",72,"Algerije","Oostenrijk","0-1","1-1","2026-06-27T13:33"],
  ["Roll-up United",65,"Egypte","Iran","1-1","1-0","2026-06-26T12:45"],
  ["Roll-up United",66,"Nieuw-Zeeland","België","0-1","1-3","2026-06-26T12:45"],
  ["Roll-up United",63,"Uruguay","Spanje","0-1","0-2","2026-06-26T12:45"],
@@ -437,11 +439,9 @@ const CHANGES=[
  ["Roll-up United",46,"Engeland","Ghana","1-0","2-1","2026-06-19T13:15"],
  ["Roll-up United",29,"Verenigde Staten","Australië","1-0","2-1","2026-06-19T13:15"],
  ["Roll-up United",43,"Noorwegen","Senegal","1-1","1-0","2026-06-19T13:15"],
- ["Roll-up United",48,"Colombia","DR Congo","1-0","2-0","2026-06-19T13:15"],
- ["Roll-up United",37,"Spanje","Saudi-Arabië","2-0","3-0","2026-06-19T13:15"],
- ["Roll-up United",38,"België","Iran","1-0","2-0","2026-06-19T13:15"]
+ ["Roll-up United",48,"Colombia","DR Congo","1-0","2-0","2026-06-19T13:15"]
 ];
-const SNAP={"Rikitic":{"3332982":"0-2","3332985":"0-2","3332989":"1-1","3333013":"1-0","3333029":"1-1","3333030":"1-2"},"Sandrinho":{"3332982":"0-2","3332985":"1-2","3332989":"1-1","3333013":"2-2","3333029":"1-1","3333030":"1-3"},"Strada Diavola":{"3332982":"0-2","3332985":"1-2","3332989":"0-2","3333013":"1-2","3333029":"2-0","3333030":"1-2"},"Benadonna":{"3332982":"0-3","3332985":"0-2","3332989":"0-1","3333013":"2-1","3333029":"2-1","3333030":"1-2"},"Mat VDP":{"3332982":"0-4","3332985":"0-3","3332989":"1-2","3333013":"0-1","3333029":"2-1","3333030":"1-2"},"NichoDP":{"3332982":"0-3","3333029":"2-3"},"Roll-up United":{"3332982":"0-2","3332985":"0-3","3332989":"0-1","3333013":"1-0","3333029":"1-0","3333030":"1-1"},"Filippo":{"3332982":"0-3","3332985":"0-2","3332989":"0-0","3333013":"0-0","3333029":"1-0","3333030":"0-1"},"Luca(ku)":{"3332982":"0-3","3332985":"0-3","3332989":"1-1","3333013":"1-0","3333029":"1-0","3333030":"0-1"},"Samuel":{"3332982":"0-2","3333013":"1-0","3333029":"1-0"},"Petra De Bruyne":{"3332982":"1-2","3332985":"0-2","3332989":"1-1","3333013":"1-1","3333029":"1-0","3333030":"0-3"},"Sigiño":{"3332982":"0-3","3332985":"0-3","3332989":"1-1","3333013":"1-2","3333029":"2-1","3333030":"2-3"}};
+const SNAP={"Rikitic":{"3332982":"0-2","3332985":"0-2","3332989":"1-1","3333013":"1-0","3333029":"1-1","3333030":"1-2"},"Sandrinho":{"3332982":"0-2","3332985":"1-2","3332989":"1-1","3333013":"2-2","3333029":"1-1","3333030":"1-3"},"Strada Diavola":{"3332982":"0-2","3332985":"1-2","3332989":"0-2","3333013":"1-2","3333029":"2-0","3333030":"1-2"},"Benadonna":{"3332982":"0-3","3332985":"0-2","3332989":"0-1","3333013":"2-1","3333029":"2-1","3333030":"1-2"},"Mat VDP":{"3332982":"0-4","3332985":"0-3","3332989":"1-2","3333013":"0-1","3333029":"2-1","3333030":"1-2"},"NichoDP":{"3332982":"0-3","3333029":"2-3"},"Roll-up United":{"3332982":"0-2","3332985":"0-1","3332989":"1-1","3333013":"1-0","3333029":"1-0","3333030":"1-1"},"Filippo":{"3332982":"0-3","3332985":"0-2","3332989":"0-0","3333013":"0-0","3333029":"1-0","3333030":"0-1"},"Luca(ku)":{"3332982":"0-3","3332985":"0-3","3332989":"1-1","3333013":"1-0","3333029":"1-0","3333030":"0-1"},"Samuel":{"3332982":"0-2","3333013":"1-0","3333029":"1-0"},"Petra De Bruyne":{"3332982":"1-2","3332985":"0-2","3332989":"1-1","3333013":"1-1","3333029":"1-0","3333030":"0-3"},"Sigiño":{"3332982":"0-3","3332985":"0-3","3332989":"1-1","3333013":"1-2","3333029":"2-1","3333030":"2-3"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
