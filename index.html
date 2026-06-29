@@ -193,7 +193,7 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 29/06 09:49
+    Flags via flagcdn.com · updated 29/06 10:03
   </footer>
 </div>
 
@@ -221,7 +221,7 @@ const PREV={"Roll-up United":1,"Strada Diavola":2,"Sandrinho":3,"Luca(ku)":4,"Ma
 const PREVAT=73;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Brazilië","br","Japan","jp","29/06 19:00",null,null,null,"Rikitic 2-2 · Sandrinho 2-1 · Benadonna 2-0 · Mat VDP 2-1 · Roll-up United 2-0 · Luca(ku) 1-0 · Samuel 1-1 · Sigiño 2-1"],
+ ["Brazilië","br","Japan","jp","29/06 19:00",null,null,null,"Rikitic 2-2 · Sandrinho 2-1 · Benadonna 2-0 · Mat VDP 2-1 · Roll-up United 1-0 · Luca(ku) 1-0 · Samuel 1-1 · Sigiño 2-1"],
  ["Duitsland","de","Paraguay","py","29/06 22:30",null,null,null,"Rikitic 2-0 · Sandrinho 3-1 · Benadonna 2-0 · Mat VDP 2-0 · Roll-up United 2-0 · Luca(ku) 3-0 · Samuel 3-0 · Sigiño 3-0"],
  ["Nederland","nl","Marokko","ma","30/06 03:00",null,null,null,"Rikitic 1-0 · Sandrinho 1-2 · Benadonna 1-1 · Mat VDP 2-2 · Roll-up United 1-0 · Luca(ku) 1-0 · Samuel 1-2 · Sigiño 2-1"],
  ["Ivoorkust","ci","Noorwegen","no","30/06 19:00",null,null,null,"Rikitic 1-2 · Sandrinho 1-2 · Benadonna 2-2 · Mat VDP 1-2 · Roll-up United 1-2 · Luca(ku) 0-1 · Samuel 2-1 · Sigiño 1-2"]
@@ -315,7 +315,7 @@ function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Zuid-Afrika 0-1 Canada</b> — 2 called it dead-on (<b>Rikitic, Sigiño</b>). <b>Roll-up United</b> tops it on <b>331</b>, 11 clear, 9 exact and ice-cold. <b>Luca(ku)</b> is on fire, charging up <b>2</b>. The floor opened under <b>Strada Diavola</b> — <b>4</b> places gone. Spare a thought for <b>Hans Vanaken is Magic!</b>, lost at sea on 10.`;
+ `Latest in: <b>Zuid-Afrika 0-1 Canada</b> — 2 called it dead-on (<b>Rikitic, Sigiño</b>). <b>Roll-up United</b> tops it on <b>331</b>, 11 clear, 9 exact and ice-cold. <b>Luca(ku)</b> is on fire, charging up <b>2</b>. The floor opened under <b>Strada Diavola</b> — <b>4</b> places gone. Spare a thought for <b>Hans Vanaken is Magic!</b>, lost at sea on 10. <b>Roll-up United</b> got cold feet — swapped the #82 pick 2-0 → 1-0 (Changes).`;
 document.getElementById('upcoming').innerHTML=
  `On deck: <b>Brazilië – Japan</b>. 3 of 8 have piled onto <b>2-1</b>. <b>Benadonna</b> is swinging for the fences at 2-0. <b>Rikitic</b> is the brave one calling a draw. Then <b>Duitsland–Paraguay</b> and <b>Nederland–Marokko</b>. <b>Roll-up United</b> is the one to hunt down.`;
 
@@ -409,6 +409,11 @@ renderTrend();
 
 // changes — recent prediction activity. CHANGES = [player, gameNo, home, away, before, after, isoTime]; before=null = first log/added, set = edited.
 const CHANGES=[
+ ["Roll-up United",82,"Verenigde Staten","Bosnië en Herzegovina","2-0","1-0","2026-06-29T08:01"],
+ ["Roll-up United",85,"Zwitserland","Algerije","2-0","1-0","2026-06-29T08:01"],
+ ["Roll-up United",80,"Engeland","DR Congo","3-1","2-0","2026-06-29T08:01"],
+ ["Roll-up United",74,"Brazilië","Japan","2-0","1-0","2026-06-29T08:01"],
+ ["Roll-up United",88,"Colombia","Ghana","2-1","1-0","2026-06-29T08:01"],
  ["Samuel",84,"Portugal","Kroatië",null,"2-1","2026-06-29T05:03"],
  ["Samuel",86,"Australië","Egypte",null,"0-1","2026-06-29T05:03"],
  ["Samuel",87,"Argentinië","Kaapverdië",null,"3-0","2026-06-29T05:03"],
@@ -430,7 +435,7 @@ const CHANGES=[
  ["Luca(ku)",82,"Verenigde Staten","Bosnië en Herzegovina",null,"3-0","2026-06-28T19:14"],
  ["Luca(ku)",86,"Australië","Egypte",null,"0-1","2026-06-28T19:14"]
 ];
-const SNAP={"Rikitic":{"3332963":"2-0","3332969":"2-1","3332977":"1-2","3332994":"1-0","3333001":"3-0","3333007":"4-0","3333023":"2-2","3333026":"1-0"},"Sandrinho":{"3332963":"3-1","3332966":"2-1","3332969":"1-2","3332977":"1-2","3332994":"3-0","3333001":"5-1","3333007":"3-0","3333008":"2-1","3333010":"1-2","3333014":"2-1","3333019":"1-1","3333023":"2-1","3333026":"1-2","3333027":"2-1","3333040":"2-1"},"Benadonna":{"3332963":"2-0","3332977":"2-2","3332994":"0-1","3333001":"3-0","3333007":"2-0","3333023":"2-0","3333026":"1-1"},"Mat VDP":{"3332963":"2-0","3332966":"2-1","3332969":"2-1","3332977":"1-2","3332994":"2-1","3333001":"3-0","3333007":"3-0","3333008":"2-1","3333010":"1-0","3333014":"3-1","3333019":"3-1","3333023":"2-1","3333026":"2-2","3333027":"2-0","3333040":"2-1"},"Roll-up United":{"3332963":"2-0","3332966":"1-0","3332969":"2-0","3332977":"1-2","3332994":"1-2","3333001":"2-0","3333007":"2-0","3333008":"2-0","3333010":"2-1","3333014":"3-1","3333019":"2-1","3333023":"2-0","3333026":"1-0","3333027":"2-1","3333040":"2-1"},"Luca(ku)":{"3332963":"3-0","3332966":"1-0","3332969":"3-0","3332977":"0-1","3332994":"0-1","3333001":"4-0","3333007":"3-0","3333008":"1-0","3333010":"1-0","3333014":"3-0","3333019":"3-0","3333023":"1-0","3333026":"1-0","3333027":"2-0","3333040":"1-0"},"Samuel":{"3332963":"3-0","3332966":"2-1","3332969":"2-1","3332977":"2-1","3332994":"0-1","3333001":"3-0","3333007":"2-0","3333008":"2-1","3333010":"0-1","3333014":"2-1","3333019":"3-1","3333023":"1-1","3333026":"1-2","3333027":"2-0","3333040":"1-1"},"Sigiño":{"3332963":"3-0","3332977":"1-2","3333007":"3-0","3333023":"2-1","3333026":"2-1"}};
+const SNAP={"Rikitic":{"3332963":"2-0","3332969":"2-1","3332977":"1-2","3332994":"1-0","3333001":"3-0","3333007":"4-0","3333023":"2-2","3333026":"1-0"},"Sandrinho":{"3332963":"3-1","3332966":"2-1","3332969":"1-2","3332977":"1-2","3332994":"3-0","3333001":"5-1","3333007":"3-0","3333008":"2-1","3333010":"1-2","3333014":"2-1","3333019":"1-1","3333023":"2-1","3333026":"1-2","3333027":"2-1","3333040":"2-1"},"Benadonna":{"3332963":"2-0","3332977":"2-2","3332994":"0-1","3333001":"3-0","3333007":"2-0","3333023":"2-0","3333026":"1-1"},"Mat VDP":{"3332963":"2-0","3332966":"2-1","3332969":"2-1","3332977":"1-2","3332994":"2-1","3333001":"3-0","3333007":"3-0","3333008":"2-1","3333010":"1-0","3333014":"3-1","3333019":"3-1","3333023":"2-1","3333026":"2-2","3333027":"2-0","3333040":"2-1"},"Roll-up United":{"3332963":"2-0","3332966":"1-0","3332969":"1-0","3332977":"1-2","3332994":"1-2","3333001":"2-0","3333007":"2-0","3333008":"1-0","3333010":"2-1","3333014":"2-0","3333019":"2-1","3333023":"1-0","3333026":"1-0","3333027":"1-0","3333040":"2-1"},"Luca(ku)":{"3332963":"3-0","3332966":"1-0","3332969":"3-0","3332977":"0-1","3332994":"0-1","3333001":"4-0","3333007":"3-0","3333008":"1-0","3333010":"1-0","3333014":"3-0","3333019":"3-0","3333023":"1-0","3333026":"1-0","3333027":"2-0","3333040":"1-0"},"Samuel":{"3332963":"3-0","3332966":"2-1","3332969":"2-1","3332977":"2-1","3332994":"0-1","3333001":"3-0","3333007":"2-0","3333008":"2-1","3333010":"0-1","3333014":"2-1","3333019":"3-1","3333023":"1-1","3333026":"1-2","3333027":"2-0","3333040":"1-1"},"Sigiño":{"3332963":"3-0","3332977":"1-2","3333007":"3-0","3333023":"2-1","3333026":"2-1"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
