@@ -193,7 +193,7 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 05/07 10:46
+    Flags via flagcdn.com · updated 05/07 21:21
   </footer>
 </div>
 
@@ -221,10 +221,10 @@ const PREV={"Mat VDP":1,"Luca(ku)":2,"Sigiño":3,"Roll-up United":4,"Sandrinho":
 const PREVAT=90;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Brazilië","br","Noorwegen","no","05/07 22:00",null,null,null,"Rikitic 2-2 · Strada Diavola 3-1 · Benadonna 2-1 · Mat VDP 2-1 · NichoDP 2-1 · Roll-up United 2-1 · Samuel 2-1 · Sigiño 2-1"],
- ["Mexico","mx","Engeland","gb-eng","06/07 02:00",null,null,null,"Rikitic 1-3 · Strada Diavola 1-0 · Benadonna 1-1 · Mat VDP 1-2 · NichoDP 0-1 · Roll-up United 0-1 · Samuel 1-1 · Sigiño 1-2"],
- ["Portugal","pt","Spanje","es","06/07 21:00",null,null,null,"Rikitic 2-2 · Strada Diavola 0-1 · Benadonna 1-1 · Mat VDP 1-2 · NichoDP 1-2 · Roll-up United 0-1 · Samuel 1-2 · Sigiño 1-2"],
- ["Verenigde Staten","us","België","be","07/07 02:00",null,null,null,"Rikitic 0-3 · Strada Diavola 1-2 · Benadonna 1-1 · Mat VDP 1-2 · NichoDP 1-3 · Roll-up United 2-1 · Samuel 0-1 · Sigiño 1-2"]
+ ["Brazilië","br","Noorwegen","no","05/07 22:00",null,null,null,"Rikitic 2-2 · Sandrinho 1-0 · Strada Diavola 3-1 · Benadonna 2-1 · Mat VDP 2-1 · NichoDP 2-1 · Roll-up United 2-1 · Luca(ku) 1-0 · Samuel 2-1 · Sigiño 2-1"],
+ ["Mexico","mx","Engeland","gb-eng","06/07 02:00",null,null,null,"Rikitic 1-3 · Sandrinho 1-2 · Strada Diavola 1-0 · Benadonna 1-1 · Mat VDP 1-2 · NichoDP 0-1 · Roll-up United 0-1 · Luca(ku) 0-1 · Samuel 1-1 · Sigiño 1-2"],
+ ["Portugal","pt","Spanje","es","06/07 21:00",null,null,null,"Rikitic 2-2 · Sandrinho 0-2 · Strada Diavola 0-1 · Benadonna 1-1 · Mat VDP 1-2 · NichoDP 1-2 · Roll-up United 0-1 · Luca(ku) 0-1 · Samuel 1-2 · Sigiño 1-2"],
+ ["Verenigde Staten","us","België","be","07/07 02:00",null,null,null,"Rikitic 0-3 · Sandrinho 0-3 · Strada Diavola 1-2 · Benadonna 1-1 · Mat VDP 1-2 · NichoDP 1-3 · Roll-up United 2-1 · Luca(ku) 0-1 · Samuel 0-1 · Sigiño 1-2"]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
@@ -334,7 +334,7 @@ sub();
 document.getElementById('missed').innerHTML=
  `Latest in: <b>Paraguay 0-1 Frankrijk</b> — 8 called it dead-on (<b>Rikitic, Strada Diavola, Benadonna</b>). <b>Mat VDP</b> leads on <b>512</b>, but <b>Roll-up United</b> is right on the bumper, 8 exact and ice-cold. <b>Roll-up United</b> is the mover of the day — rocketed up <b>2</b> places. <b>Luca(ku)</b> is in freefall, down <b>2</b>. And <b>Hans Vanaken is Magic!</b>? Vanished — rock bottom on 10, 502 adrift.`;
 document.getElementById('upcoming').innerHTML=
- `Next up: <b>Brazilië – Noorwegen</b>. 6 of 8 have piled onto <b>2-1</b>. <b>Strada Diavola</b> is swinging for the fences at 3-1. <b>Rikitic</b> is the brave one calling a draw. Then <b>Mexico–Engeland</b> and <b>Portugal–Spanje</b>. <b>Mat VDP</b> is the one to hunt down.`;
+ `Next up: <b>Brazilië – Noorwegen</b>. 6 of 10 have piled onto <b>2-1</b>. <b>Strada Diavola</b> is swinging for the fences at 3-1. <b>Rikitic</b> is the brave one calling a draw. Then <b>Mexico–Engeland</b> and <b>Portugal–Spanje</b>. <b>Mat VDP</b> is the one to hunt down.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -456,7 +456,7 @@ const CHANGES=[
  ["Luca(ku)",82,"Verenigde Staten","Bosnië en Herzegovina",null,"3-0","2026-06-28T19:14"],
  ["Luca(ku)",86,"Australië","Egypte",null,"0-1","2026-06-28T19:14"]
 ];
-const SNAP={"Rikitic":{"3332964":"0-3","3332976":"1-3","3332995":"2-2","3333022":"2-2"},"Strada Diavola":{"3332964":"1-2","3332976":"1-0","3332995":"3-1","3333022":"0-1"},"Benadonna":{"3332964":"1-1","3332976":"1-1","3332995":"2-1","3333022":"1-1","3333025":"2-0","3333035":"2-2"},"Mat VDP":{"3332964":"1-2","3332976":"1-2","3332995":"2-1","3333022":"1-2","3333035":"1-2"},"NichoDP":{"3332964":"1-3","3332976":"0-1","3332995":"2-1","3333022":"1-2"},"Roll-up United":{"3332964":"2-1","3332976":"0-1","3332995":"2-1","3333022":"0-1","3333025":"1-0","3333035":"0-1"},"Samuel":{"3332964":"0-1","3332976":"1-1","3332995":"2-1","3333022":"1-2","3333025":"2-0","3333035":"0-2"},"Sigiño":{"3332964":"1-2","3332976":"1-2","3332995":"2-1","3333022":"1-2"}};
+const SNAP={"Rikitic":{"3332964":"0-3","3332976":"1-3","3332995":"2-2","3332999":"2-1","3333022":"2-2","3333025":"1-0","3333035":"2-1"},"Sandrinho":{"3332964":"0-3","3332976":"1-2","3332995":"1-0","3332999":"1-2","3333022":"0-2","3333025":"3-2","3333035":"0-1"},"Strada Diavola":{"3332964":"1-2","3332976":"1-0","3332995":"3-1","3333022":"0-1"},"Benadonna":{"3332964":"1-1","3332976":"1-1","3332995":"2-1","3333022":"1-1","3333025":"2-0","3333035":"2-2"},"Mat VDP":{"3332964":"1-2","3332976":"1-2","3332995":"2-1","3333022":"1-2","3333035":"1-2"},"NichoDP":{"3332964":"1-3","3332976":"0-1","3332995":"2-1","3333022":"1-2"},"Roll-up United":{"3332964":"2-1","3332976":"0-1","3332995":"2-1","3333022":"0-1","3333025":"1-0","3333035":"0-1"},"Luca(ku)":{"3332964":"0-1","3332976":"0-1","3332995":"1-0","3332999":"2-0","3333022":"0-1","3333025":"3-0","3333035":"0-1"},"Samuel":{"3332964":"0-1","3332976":"1-1","3332995":"2-1","3333022":"1-2","3333025":"2-0","3333035":"0-2"},"Sigiño":{"3332964":"1-2","3332976":"1-2","3332995":"2-1","3333022":"1-2"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
