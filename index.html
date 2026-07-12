@@ -193,24 +193,24 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 11/07 07:50
+    Flags via flagcdn.com · updated 12/07 08:38
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",9,9,26,28,603,292],
- ["Mat VDP",8,7,28,29,596,298],
- ["Luca(ku)",6,9,30,27,565,265],
- ["Sigiño",4,7,33,28,564,282],
- ["Sandrinho",5,16,22,29,540,239],
- ["Strada Diavola",8,5,32,27,531,229],
- ["Rikitic",8,13,19,26,521,229],
- ["Samuel",8,10,22,20,495,215],
- ["Benadonna",5,13,23,31,494,207],
+ ["Roll-up United",9,9,26,28,633,322],
+ ["Mat VDP",8,7,28,29,620,322],
+ ["Sigiño",4,7,33,28,604,322],
+ ["Luca(ku)",6,9,30,27,567,267],
+ ["Strada Diavola",8,5,32,27,551,249],
+ ["Sandrinho",5,16,22,29,551,250],
+ ["Rikitic",8,13,19,26,541,249],
+ ["Samuel",8,10,22,20,519,239],
+ ["Benadonna",5,13,23,31,496,209],
  ["Filippo",7,11,24,30,432,135],
- ["NichoDP",5,2,22,31,406,201],
+ ["NichoDP",5,2,22,31,421,216],
  ["Petra De Bruyne",5,10,20,37,257,0],
  ["Nathan De Cat 💜🤍",2,5,10,13,118,0],
  ["Bas",2,3,6,13,84,0],
@@ -218,16 +218,18 @@ const STAND=[
  ["Hans Vanaken is Magic!",0,1,0,3,10,0]
 ];
 const PREV={"Roll-up United":1,"Mat VDP":2,"Luca(ku)":3,"Sigiño":4,"Sandrinho":5,"Strada Diavola":6,"Rikitic":7,"Samuel":8,"Benadonna":9,"Filippo":10,"NichoDP":11,"Petra De Bruyne":12,"Nathan De Cat 💜🤍":13,"Bas":14,"Red Devil Capital":15,"Hans Vanaken is Magic!":16};
-const PREVAT=98;
+const PREVAT=100;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Noorwegen","no","Engeland","gb-eng","11/07 23:00",null,null,null,"Rikitic 2-2 · Sandrinho 2-1 · Strada Diavola 1-2 · Benadonna 2-0 · Mat VDP 2-1 · NichoDP 1-2 · Roll-up United 1-2 · Luca(ku) 1-0 · Samuel 0-2 · Sigiño 1-2"],
- ["Argentinië","ar","Zwitserland","ch","12/07 03:00",null,null,null,"Rikitic 1-0 · Sandrinho 3-2 · Benadonna 2-2 · Mat VDP 1-0 · Roll-up United 1-0 · Luca(ku) 0-1 · Samuel 2-0 · Sigiño 3-1"],
  ["Frankrijk","fr","Spanje","es","14/07 21:00",null,null,null,""],
- ["Winnaar KF 3","","Winnaar KF 4","","15/07 21:00",null,null,null,""]
+ ["Engeland","gb-eng","Argentinië","ar","15/07 21:00",null,null,null,"Roll-up United 1-2"],
+ ["Verliezer HF 1","","Verliezer HF 2","","18/07 23:00",null,null,null,""],
+ ["Winnaar HF 1","","Winnaar HF 2","","19/07 21:00",null,null,null,""]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
+ ["Argentinië","ar","Zwitserland","ch","12/07",3,1,"Sigiño 3-1|20 · Mat VDP 2-0|14 · NichoDP 2-0|14 · Samuel 2-0|14 · Rikitic 1-0|10 · Sandrinho 3-2|10 · Roll-up United 1-0|10 · Benadonna 2-2|1 · Luca(ku) 0-1|1"],
+ ["Noorwegen","no","Engeland","gb-eng","11/07",1,2,"Strada Diavola 1-2|20 · Roll-up United 1-2|20 · Sigiño 1-2|20 · Rikitic 2-2|10 · Mat VDP 0-2|10 · Samuel 0-2|10 · Sandrinho 2-1|1 · Benadonna 2-0|1 · NichoDP 2-2|1 · Luca(ku) 1-0|1"],
  ["Spanje","es","België","be","10/07",2,1,"Mat VDP 2-1|20 · Benadonna 1-0|14 · Roll-up United 1-0|14 · Samuel 1-0|14 · Rikitic 0-1|1 · Sandrinho 0-2|1 · Strada Diavola 2-2|1 · NichoDP 2-3|1 · Luca(ku) 0-1|1 · Sigiño 1-2|1"],
  ["Frankrijk","fr","Marokko","ma","09/07",2,0,"NichoDP 2-0|20 · Roll-up United 2-0|20 · Luca(ku) 2-0|20 · Rikitic 2-1|10 · Strada Diavola 2-1|10 · Benadonna 2-1|10 · Mat VDP 2-1|10 · Sigiño 2-1|10 · Sandrinho 1-2|1 · Samuel 1-2|1"],
  ["Zwitserland","ch","Colombia","co","07/07",0,0,"Benadonna 2-2|14 · Rikitic 2-1|10 · NichoDP 2-1|10 · Sandrinho 0-1|1 · Strada Diavola 0-1|1 · Mat VDP 1-2|1 · Roll-up United 0-1|1 · Luca(ku) 0-1|1 · Samuel 0-2|1 · Sigiño 1-2|1"],
@@ -336,13 +338,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(fav==null?'':(o===fav?'sg':'sr'));}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 26/32 KO · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 28/32 KO · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Spanje 2-1 België</b> — nobody had that on their card. <b>Roll-up United</b> tops it on <b>603</b>, 7 clear, 9 exact and ice-cold. Anchored to the foot: <b>Hans Vanaken is Magic!</b>, 10 and 593 off the pace.`;
+ `Latest in: <b>Argentinië 3-1 Zwitserland</b> — 3 called it dead-on (<b>Rikitic, Sandrinho, Roll-up United</b>). <b>Roll-up United</b> is bossing this, <b>633</b> and 13 clear, 9 exact and ice-cold. Spare a thought for <b>Hans Vanaken is Magic!</b>, lost at sea on 10.`;
 document.getElementById('upcoming').innerHTML=
- `Up next: <b>Noorwegen – Engeland</b>. 4 of 10 have piled onto <b>1-2</b>. <b>Benadonna</b> is swinging for the fences at 2-0. <b>Rikitic</b> is the brave one calling a draw. Then <b>Argentinië–Zwitserland</b> and <b>Frankrijk–Spanje</b>. <b>Roll-up United</b> is the one to hunt down.`;
+ `On deck: <b>Frankrijk – Spanje</b>. Then <b>Engeland–Argentinië</b> and <b>Verliezer HF 1–Verliezer HF 2</b>. Reeling in <b>Roll-up United</b> from here? Best of luck.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -465,7 +467,7 @@ const CHANGES=[
  ["Luca(ku)",82,"Verenigde Staten","Bosnië en Herzegovina",null,"3-0","2026-06-28T19:14"],
  ["Luca(ku)",86,"Australië","Egypte",null,"0-1","2026-06-28T19:14"]
 ];
-const SNAP={"Rikitic":{"3332996":"1-0","3332998":"2-2"},"Sandrinho":{"3332996":"3-2","3332998":"2-1"},"Strada Diavola":{"3332998":"1-2"},"Benadonna":{"3332996":"2-2","3332998":"2-0"},"Mat VDP":{"3332996":"1-0","3332998":"2-1"},"NichoDP":{"3332998":"1-2"},"Roll-up United":{"3332996":"1-0","3332998":"1-2"},"Luca(ku)":{"3332996":"0-1","3332998":"1-0"},"Samuel":{"3332996":"2-0","3332998":"0-2"},"Sigiño":{"3332996":"3-1","3332998":"1-2"}};
+const SNAP={"Roll-up United":{"3333041":"1-2"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
