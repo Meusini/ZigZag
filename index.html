@@ -193,41 +193,41 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 14/07 16:07
+    Flags via flagcdn.com · updated 15/07 07:05
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",9,9,26,28,633,322],
- ["Mat VDP",8,7,28,29,620,322],
+ ["Roll-up United",9,9,26,28,634,323],
+ ["Mat VDP",8,7,28,29,621,323],
  ["Sigiño",4,7,33,28,604,322],
- ["Luca(ku)",6,9,30,27,567,267],
+ ["Luca(ku)",6,9,30,27,577,277],
  ["Strada Diavola",8,5,32,27,551,249],
  ["Sandrinho",5,16,22,29,551,250],
- ["Rikitic",8,13,19,26,541,249],
- ["Samuel",8,10,22,20,519,239],
- ["Benadonna",5,13,23,31,496,209],
+ ["Rikitic",8,13,19,26,542,250],
+ ["Samuel",8,10,22,20,529,249],
+ ["Benadonna",5,13,23,31,506,219],
  ["Filippo",7,11,24,30,432,135],
- ["NichoDP",5,2,22,31,421,216],
+ ["NichoDP",5,2,22,31,422,217],
  ["Petra De Bruyne",5,10,20,37,257,0],
  ["Nathan De Cat 💜🤍",2,5,10,13,118,0],
  ["Bas",2,3,6,13,84,0],
  ["Red Devil Capital",1,0,8,8,58,0],
  ["Hans Vanaken is Magic!",0,1,0,3,10,0]
 ];
-const PREV={"Roll-up United":1,"Mat VDP":2,"Luca(ku)":3,"Sigiño":4,"Sandrinho":5,"Strada Diavola":6,"Rikitic":7,"Samuel":8,"Benadonna":9,"Filippo":10,"NichoDP":11,"Petra De Bruyne":12,"Nathan De Cat 💜🤍":13,"Bas":14,"Red Devil Capital":15,"Hans Vanaken is Magic!":16};
-const PREVAT=100;
+const PREV={"Roll-up United":1,"Mat VDP":2,"Sigiño":3,"Luca(ku)":4,"Sandrinho":5,"Strada Diavola":6,"Rikitic":7,"Samuel":8,"Benadonna":9,"Filippo":10,"NichoDP":11,"Petra De Bruyne":12,"Nathan De Cat 💜🤍":13,"Bas":14,"Red Devil Capital":15,"Hans Vanaken is Magic!":16};
+const PREVAT=101;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Frankrijk","fr","Spanje","es","14/07 21:00",null,null,null,"Rikitic 2-1 · Mat VDP 2-1 · NichoDP 1-0 · Roll-up United 2-0 · Luca(ku) 2-2"],
- ["Engeland","gb-eng","Argentinië","ar","15/07 21:00",null,null,null,"Rikitic 3-1 · Roll-up United 1-0 · Luca(ku) 2-2"],
- ["Verliezer HF 1","","Verliezer HF 2","","18/07 23:00",null,null,null,""],
- ["Winnaar HF 1","","Winnaar HF 2","","19/07 21:00",null,null,null,""]
+ ["Engeland","gb-eng","Argentinië","ar","15/07 21:00",null,null,null,"Rikitic 3-1 · Benadonna 2-0 · Roll-up United 1-0 · Luca(ku) 2-2 · Samuel 2-1"],
+ ["Frankrijk","fr","Verliezer HF 2","","18/07 23:00",null,null,null,""],
+ ["Spanje","es","Winnaar HF 2","","19/07 21:00",null,null,null,""]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
+ ["Frankrijk","fr","Spanje","es","14/07",0,2,"Benadonna 0-1|10 · Luca(ku) 2-2|10 · Samuel 1-2|10 · Rikitic 2-1|1 · Mat VDP 2-1|1 · NichoDP 1-0|1 · Roll-up United 2-0|1"],
  ["Argentinië","ar","Zwitserland","ch","12/07",3,1,"Sigiño 3-1|20 · Mat VDP 2-0|14 · NichoDP 2-0|14 · Samuel 2-0|14 · Rikitic 1-0|10 · Sandrinho 3-2|10 · Roll-up United 1-0|10 · Benadonna 2-2|1 · Luca(ku) 0-1|1"],
  ["Noorwegen","no","Engeland","gb-eng","11/07",1,2,"Strada Diavola 1-2|20 · Roll-up United 1-2|20 · Sigiño 1-2|20 · Rikitic 2-2|10 · Mat VDP 0-2|10 · Samuel 0-2|10 · Sandrinho 2-1|1 · Benadonna 2-0|1 · NichoDP 2-2|1 · Luca(ku) 1-0|1"],
  ["Spanje","es","België","be","10/07",2,1,"Mat VDP 2-1|20 · Benadonna 1-0|14 · Roll-up United 1-0|14 · Samuel 1-0|14 · Rikitic 0-1|1 · Sandrinho 0-2|1 · Strada Diavola 2-2|1 · NichoDP 2-3|1 · Luca(ku) 0-1|1 · Sigiño 1-2|1"],
@@ -338,13 +338,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(fav==null?'':(o===fav?'sg':'sr'));}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 28/32 KO · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 29/32 KO · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Argentinië 3-1 Zwitserland</b> — 3 called it dead-on (<b>Rikitic, Sandrinho, Roll-up United</b>). <b>Roll-up United</b> is bossing this, <b>633</b> and 13 clear, 9 exact and ice-cold. Spare a thought for <b>Hans Vanaken is Magic!</b>, lost at sea on 10. <b>Roll-up United</b> got cold feet — swapped the #101 pick 1-0 → 2-0 (Changes).`;
+ `Latest in: <b>Frankrijk 0-2 Spanje</b> — 3 called it dead-on (<b>Benadonna, Luca(ku), Samuel</b>). Nobody's laying a glove on <b>Roll-up United</b> (<b>634</b>), 9 exact and ice-cold. Anchored to the foot: <b>Hans Vanaken is Magic!</b>, 10 and 624 off the pace.`;
 document.getElementById('upcoming').innerHTML=
- `On deck: <b>Frankrijk – Spanje</b>. 2 of 5 have piled onto <b>2-1</b>. <b>Roll-up United</b> is swinging for the fences at 2-0. <b>Luca(ku)</b> is the brave one calling a draw. Then <b>Engeland–Argentinië</b> and <b>Verliezer HF 1–Verliezer HF 2</b>. Reeling in <b>Roll-up United</b> from here? Best of luck.`;
+ `Up next: <b>Engeland – Argentinië</b>. No two agree — 5 picks, 5 different scores. <b>Rikitic</b> is swinging for the fences at 3-1. <b>Luca(ku)</b> is the brave one calling a draw. Then <b>Frankrijk–Verliezer HF 2</b> and <b>Spanje–Winnaar HF 2</b>. Someone, anyone, please catch <b>Roll-up United</b>.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -469,7 +469,7 @@ const CHANGES=[
  ["Luca(ku)",82,"Verenigde Staten","Bosnië en Herzegovina",null,"3-0","2026-06-28T19:14"],
  ["Luca(ku)",86,"Australië","Egypte",null,"0-1","2026-06-28T19:14"]
 ];
-const SNAP={"Rikitic":{"3332980":"2-1","3333041":"3-1"},"Mat VDP":{"3332980":"2-1"},"NichoDP":{"3332980":"1-0"},"Roll-up United":{"3332980":"2-0","3333041":"1-0"},"Luca(ku)":{"3332980":"2-2","3333041":"2-2"}};
+const SNAP={"Rikitic":{"3333041":"3-1"},"Benadonna":{"3333041":"2-0"},"Roll-up United":{"3333041":"1-0"},"Luca(ku)":{"3333041":"2-2"},"Samuel":{"3333041":"2-1"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
