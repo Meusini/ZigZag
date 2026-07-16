@@ -193,7 +193,7 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 16/07 07:10
+    Flags via flagcdn.com · updated 16/07 16:04
   </footer>
 </div>
 
@@ -221,8 +221,8 @@ const PREV={"Roll-up United":1,"Mat VDP":2,"Sigiño":3,"Luca(ku)":4,"Sandrinho":
 const PREVAT=102;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Frankrijk","fr","Engeland","gb-eng","18/07 23:00",null,null,null,""],
- ["Spanje","es","Argentinië","ar","19/07 21:00",null,null,null,""]
+ ["Frankrijk","fr","Engeland","gb-eng","18/07 23:00",null,null,null,"Roll-up United 1-0 · Sigiño 2-1"],
+ ["Spanje","es","Argentinië","ar","19/07 21:00",null,null,null,"Roll-up United 2-0 · Sigiño 2-2"]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
@@ -344,7 +344,7 @@ sub();
 document.getElementById('missed').innerHTML=
  `Latest in: <b>Engeland 1-2 Argentinië</b> — only <b>Luca(ku)</b> nailed it. <b>Roll-up United</b> tops it on <b>635</b>, 11 clear, 9 exact and ice-cold. And <b>Hans Vanaken is Magic!</b>? Vanished — rock bottom on 10, 625 adrift.`;
 document.getElementById('upcoming').innerHTML=
- `Next up: <b>Frankrijk – Engeland</b>. Then <b>Spanje–Argentinië</b>. <b>Roll-up United</b> is the one to hunt down.`;
+ `Next up: <b>Frankrijk – Engeland</b>. No two agree — 2 picks, 2 different scores. Then <b>Spanje–Argentinië</b>. <b>Roll-up United</b> is the one to hunt down.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -436,40 +436,28 @@ renderTrend();
 
 // changes — recent prediction activity. CHANGES = [player, gameNo, home, away, before, after, isoTime]; before=null = first log/added, set = edited.
 const CHANGES=[
- ["Roll-up United",101,"Frankrijk","Spanje","1-0","2-0","2026-07-14T08:20"],
- ["Roll-up United",102,"Engeland","Argentinië","1-2","1-0","2026-07-12T06:56"],
- ["Roll-up United",98,"Spanje","België","0-1","1-0","2026-07-08T04:04"],
- ["Roll-up United",88,"Colombia","Ghana","1-0","2-1","2026-07-03T08:49"],
- ["Roll-up United",86,"Australië","Egypte","1-2","0-1","2026-07-02T14:36"],
- ["Roll-up United",83,"Spanje","Oostenrijk","2-1","2-0","2026-07-02T14:36"],
- ["Roll-up United",79,"Mexico","Ecuador","2-1","1-0","2026-06-30T20:21"],
- ["Roll-up United",82,"Verenigde Staten","Bosnië en Herzegovina","2-0","1-0","2026-06-29T08:01"],
- ["Roll-up United",85,"Zwitserland","Algerije","2-0","1-0","2026-06-29T08:01"],
- ["Roll-up United",80,"Engeland","DR Congo","3-1","2-0","2026-06-29T08:01"],
- ["Roll-up United",74,"Brazilië","Japan","2-0","1-0","2026-06-29T08:01"],
- ["Roll-up United",88,"Colombia","Ghana","2-1","1-0","2026-06-29T08:01"],
- ["Samuel",84,"Portugal","Kroatië",null,"2-1","2026-06-29T05:03"],
- ["Samuel",86,"Australië","Egypte",null,"0-1","2026-06-29T05:03"],
- ["Samuel",87,"Argentinië","Kaapverdië",null,"3-0","2026-06-29T05:03"],
- ["Samuel",85,"Zwitserland","Algerije",null,"2-1","2026-06-29T05:03"],
- ["Samuel",88,"Colombia","Ghana",null,"2-0","2026-06-29T05:03"],
- ["Samuel",82,"Verenigde Staten","Bosnië en Herzegovina",null,"2-1","2026-06-29T05:02"],
- ["Samuel",80,"Engeland","DR Congo",null,"2-1","2026-06-29T05:02"],
- ["Samuel",83,"Spanje","Oostenrijk",null,"3-1","2026-06-29T05:02"],
- ["Samuel",81,"België","Senegal",null,"1-1","2026-06-29T05:02"],
- ["Samuel",75,"Duitsland","Paraguay",null,"3-0","2026-06-29T05:01"],
- ["Samuel",77,"Ivoorkust","Noorwegen",null,"2-1","2026-06-29T05:01"],
- ["Samuel",78,"Frankrijk","Zweden",null,"2-0","2026-06-29T05:01"],
- ["Samuel",79,"Mexico","Ecuador",null,"0-1","2026-06-29T05:01"],
- ["Samuel",76,"Nederland","Marokko",null,"1-2","2026-06-29T05:01"],
- ["Samuel",74,"Brazilië","Japan",null,"1-1","2026-06-29T05:00"],
- ["Luca(ku)",87,"Argentinië","Kaapverdië",null,"4-0","2026-06-28T19:15"],
- ["Luca(ku)",88,"Colombia","Ghana",null,"2-0","2026-06-28T19:15"],
- ["Luca(ku)",84,"Portugal","Kroatië",null,"1-0","2026-06-28T19:14"],
- ["Luca(ku)",82,"Verenigde Staten","Bosnië en Herzegovina",null,"3-0","2026-06-28T19:14"],
- ["Luca(ku)",86,"Australië","Egypte",null,"0-1","2026-06-28T19:14"]
+ ["Roll-up United",104,"Spanje","Argentinië",null,"2-0","2026-07-16T10:30"],
+ ["Roll-up United",103,"Frankrijk","Engeland",null,"1-0","2026-07-16T07:53"],
+ ["Sigiño",104,"Spanje","Argentinië",null,"2-2","2026-07-16T05:35"],
+ ["Sigiño",103,"Frankrijk","Engeland",null,"2-1","2026-07-16T05:34"],
+ ["Sigiño",102,"Engeland","Argentinië",null,"1-2","2026-07-15T18:54"],
+ ["NichoDP",102,"Engeland","Argentinië",null,"3-2","2026-07-15T17:32"],
+ ["Mat VDP",102,"Engeland","Argentinië",null,"2-1","2026-07-15T06:24"],
+ ["Samuel",101,"Frankrijk","Spanje",null,"1-2","2026-07-14T18:53"],
+ ["Samuel",102,"Engeland","Argentinië",null,"2-1","2026-07-14T18:53"],
+ ["Benadonna",101,"Frankrijk","Spanje",null,"0-1","2026-07-14T18:50"],
+ ["Benadonna",102,"Engeland","Argentinië",null,"2-0","2026-07-14T18:50"],
+ ["Mat VDP",101,"Frankrijk","Spanje",null,"2-1","2026-07-14T12:51"],
+ ["Roll-up United",101,"Frankrijk","Spanje",null,"2-0","2026-07-14T08:20"],
+ ["NichoDP",101,"Frankrijk","Spanje",null,"1-0","2026-07-13T17:03"],
+ ["Rikitic",101,"Frankrijk","Spanje",null,"2-1","2026-07-13T05:55"],
+ ["Rikitic",102,"Engeland","Argentinië",null,"3-1","2026-07-13T05:55"],
+ ["Luca(ku)",101,"Frankrijk","Spanje",null,"2-2","2026-07-12T10:08"],
+ ["Luca(ku)",102,"Engeland","Argentinië",null,"2-2","2026-07-12T10:08"],
+ ["Roll-up United",102,"Engeland","Argentinië",null,"1-0","2026-07-12T06:56"],
+ ["Mat VDP",100,"Argentinië","Zwitserland",null,"2-0","2026-07-11T19:19"]
 ];
-const SNAP={};
+const SNAP={"Roll-up United":{"3332984":"2-0","3333031":"1-0"},"Sigiño":{"3332984":"2-2","3333031":"2-1"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
