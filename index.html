@@ -193,22 +193,22 @@
 
   <footer>
     Made for the Zig Zag crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 17/07 16:04
+    Flags via flagcdn.com · updated 22/07 07:04
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",9,9,26,28,635,324],
- ["Sigiño",4,7,33,28,624,342],
- ["Mat VDP",8,7,28,29,622,324],
- ["Luca(ku)",6,9,30,27,587,287],
+ ["Roll-up United",9,9,26,28,646,335],
+ ["Sigiño",4,7,33,28,639,357],
+ ["Mat VDP",8,7,28,29,623,325],
+ ["Luca(ku)",6,9,30,27,602,302],
  ["Strada Diavola",8,5,32,27,551,249],
  ["Sandrinho",5,16,22,29,551,250],
  ["Rikitic",8,13,19,26,543,251],
  ["Samuel",8,10,22,20,530,250],
- ["Benadonna",5,13,23,31,507,220],
+ ["Benadonna",5,13,23,31,518,231],
  ["Filippo",7,11,24,30,432,135],
  ["NichoDP",5,2,22,31,423,218],
  ["Petra De Bruyne",5,10,20,37,257,0],
@@ -217,15 +217,16 @@ const STAND=[
  ["Red Devil Capital",1,0,8,8,58,0],
  ["Hans Vanaken is Magic!",0,1,0,3,10,0]
 ];
-const PREV={"Roll-up United":1,"Mat VDP":2,"Sigiño":3,"Luca(ku)":4,"Sandrinho":5,"Strada Diavola":6,"Rikitic":7,"Samuel":8,"Benadonna":9,"Filippo":10,"NichoDP":11,"Petra De Bruyne":12,"Nathan De Cat 💜🤍":13,"Bas":14,"Red Devil Capital":15,"Hans Vanaken is Magic!":16};
-const PREVAT=102;
+const PREV={"Roll-up United":1,"Sigiño":2,"Mat VDP":3,"Luca(ku)":4,"Sandrinho":5,"Strada Diavola":6,"Rikitic":7,"Samuel":8,"Benadonna":9,"Filippo":10,"NichoDP":11,"Petra De Bruyne":12,"Nathan De Cat 💜🤍":13,"Bas":14,"Red Devil Capital":15,"Hans Vanaken is Magic!":16};
+const PREVAT=104;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Frankrijk","fr","Engeland","gb-eng","18/07 23:00",null,null,null,"Roll-up United 1-0 · Sigiño 2-1"],
- ["Spanje","es","Argentinië","ar","19/07 21:00",null,null,null,"Roll-up United 2-0 · Sigiño 2-2"]
+ 
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
+ ["Spanje","es","Argentinië","ar","19/07",1,0,"Luca(ku) 3-2|14 · Sigiño 3-2|14 · Benadonna 4-2|10 · Roll-up United 2-0|10 · Mat VDP 1-2|1"],
+ ["Frankrijk","fr","Engeland","gb-eng","18/07",4,6,"Benadonna 2-1|1 · Roll-up United 1-0|1 · Luca(ku) 4-0|1 · Sigiño 2-1|1"],
  ["Engeland","gb-eng","Argentinië","ar","15/07",1,2,"Sigiño 1-2|20 · Luca(ku) 2-2|10 · Rikitic 3-1|1 · Benadonna 2-0|1 · Mat VDP 2-1|1 · NichoDP 3-2|1 · Roll-up United 1-0|1 · Samuel 2-1|1"],
  ["Frankrijk","fr","Spanje","es","14/07",0,2,"Benadonna 0-1|10 · Luca(ku) 2-2|10 · Samuel 1-2|10 · Rikitic 2-1|1 · Mat VDP 2-1|1 · NichoDP 1-0|1 · Roll-up United 2-0|1"],
  ["Argentinië","ar","Zwitserland","ch","12/07",3,1,"Sigiño 3-1|20 · Mat VDP 2-0|14 · NichoDP 2-0|14 · Samuel 2-0|14 · Rikitic 1-0|10 · Sandrinho 3-2|10 · Roll-up United 1-0|10 · Benadonna 2-2|1 · Luca(ku) 0-1|1"],
@@ -338,13 +339,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(fav==null?'':(o===fav?'sg':'sr'));}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 30/32 KO · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 32/32 KO · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Engeland 1-2 Argentinië</b> — only <b>Luca(ku)</b> nailed it. <b>Roll-up United</b> tops it on <b>635</b>, 11 clear, 9 exact and ice-cold. And <b>Hans Vanaken is Magic!</b>? Vanished — rock bottom on 10, 625 adrift.`;
+ `Latest in: <b>Spanje 1-0 Argentinië</b> — 2 called it dead-on (<b>Benadonna, Roll-up United</b>). <b>Roll-up United</b> tops it on <b>646</b>, 7 clear, 9 exact and ice-cold. Anchored to the foot: <b>Hans Vanaken is Magic!</b>, 10 and 636 off the pace.`;
 document.getElementById('upcoming').innerHTML=
- `Next up: <b>Frankrijk – Engeland</b>. No two agree — 2 picks, 2 different scores. Then <b>Spanje–Argentinië</b>. <b>Roll-up United</b> is the one to hunt down.`;
+ `Group stage all but done. <b>Roll-up United</b> is the one to hunt down.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -457,7 +458,7 @@ const CHANGES=[
  ["Roll-up United",102,"Engeland","Argentinië",null,"1-0","2026-07-12T06:56"],
  ["Mat VDP",100,"Argentinië","Zwitserland",null,"2-0","2026-07-11T19:19"]
 ];
-const SNAP={"Roll-up United":{"3332984":"2-0","3333031":"1-0"},"Sigiño":{"3332984":"2-2","3333031":"2-1"}};
+const SNAP={};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
